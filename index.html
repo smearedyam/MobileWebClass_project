@@ -23,6 +23,16 @@
             <li><a href="#yellowbg">Yellow Background</a></li>
             <li><a href="#blackbg">Black Background</a></li>
         </ul>
+        <div style="visibility:	hidden">	
+        <ul>
+        	<li></li>
+        </ul>
+        </div>
+        <ul data-role="listview" data-split-icon="gear" data-split-theme="d" data-theme="d" data-divider-theme="d">
+        	<li><a href="#feedback">Offer feeback for the Magic 9 Ball app</a></li>
+        </ul>
+
+
 	</div>
 	<div data-role="footer" data-theme="b">
 	  <h4>Magic 9 Ball &copy; 2016</h4>
@@ -77,5 +87,50 @@
   </div>
 </footer>
 </div>
+<div id="feedback" data-role="page" data-theme="d" data-transition="flip">
+	<div data-role="header" data-theme="d">
+      	<a class="hidden" href="index.html" data-role="button" data-icon="back"></a>  
+      	<a href="index.html" data-role="button" data-icon="back">Back</a> 
+	  	<div class="logo"><img src="images/magic9ball_logo.png" width="218" height="45" alt=""/>
+        </div>
+	</div>
+  <div data-role="content" style="width: 100%;">
+    <h3>Please fill in your feedback below and click submit.</h3>
+      <form id="feebackForm"></form>
+    <label for="firstName">First Name</label>
+      <input name="firstName" type="text" id="firstName" form="feebackForm" title="firstName">
+    <label for="lastName">Last Name</label>
+      <input name="lastName" type="text" id="lastName" form="feebackForm" title="lastName">
+      <div data-role="fieldcontain">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value=""  />
+      </div>
+<label for="comments">Please tell us your comments:</label>
+	<textarea name="comments" maxlength="2000" id="comments" form="feebackForm" placeholder="comments" title="comments">  
+	</textarea>
+	<div data-role="fieldcontain" data-theme="a">
+	  <fieldset data-role="controlgroup" data-type="horizontal">
+	    <legend>Please rate the Magic 9 Ball app.</legend>
+	    <input type="radio" name="rating" id="rating_0" value="" />
+	    <label for="rating_0">1 star</label>
+	    <input type="radio" name="rating" id="rating_1" value="" />
+	    <label for="rating_1">2 star</label>
+	    <input type="radio" name="rating" id="rating_2" value="" />
+	    <label for="rating_2">3 star</label>
+	    <input type="radio" name="rating" id="rating_3" value="" />
+	    <label for="rating_3">4 star</label>
+	    <input type="radio" name="rating" id="rating_4" value="" />
+	    <label for="rating_4">5 star</label>
+      </fieldset>
+    </div>  
+      <input name="submitButton" type="submit" id="submitButton" form="feebackForm" formmethod="GET" title="eee" value="SUBMIT (does nothing currently)">
+    </div>
+  <footer class="footer">
+    <div class="footer">
+      Magic 9 Ball &copy; 2016
+    </div>
+  </footer>
+ </div>
+
 </body>
 </html>
