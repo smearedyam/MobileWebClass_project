@@ -9,6 +9,30 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<script>
+function newAnswer(color) {	
+    var answers = ['Yes', 'No', 'Maybe', 'No Way', 'Not Sure', 'Of Course', 'Ask Again'];
+	var rand = answers[Math.floor(Math.random() * answers.length)];
+	var image = document.getElementById('ballPic'+color);
+	var text = document.getElementById('answerText'+color);
+	var corPrompt = document.getElementById('promptText'+color);
+    if (image.src.match("9ball")) {
+        image.src = "images/numberless.png";
+		text.innerHTML = rand;
+		corPrompt.style = "visibility: visibile";
+    } else {
+        image.src = "images/9ball.png";
+		text.innerHTML = "";
+		corPrompt.style = "visibility: hidden";
+    }
+	
+	   
+}
+</script>
+
+
+
+
 </head> 
 <body> 
 
@@ -38,33 +62,70 @@
 	  <h4>Magic 9 Ball &copy; 2016</h4>
 	</div>
 </div>
-
+<!--      ---------------------------   -->
 <div id="bluebg" data-role="page" data-transition="slide">
 	<div data-role="header" data-theme="b">
       	<a class="hidden" href="index.html" data-role="button" data-icon="back"></a>  
       	<a href="index.html" data-role="button" data-icon="back">Back</a> 
 	  	<div class="logo"><img src="images/magic9ball_logo.png" width="218" height="45" alt=""/></div>
 	</div>
-	<div data-role="content" style="width: 100%;">
-      <h3>Tap the screen or shake the device to receive an answer to your question.</h3>
-    <img class="" src="images/9ball.png" alt="" style="width: 90%;"/> 
+	<div data-role="content" class="image" style="width: 100%; padding: 0px" onClick="newAnswer('Blue')">
+      <h3>Ask a question out loud, then click the ball to receive an answer.</h3>
+      <div class="ball">	
+        <div id="answerTextBlue" class="answerText"></div>
+        
+        <img id="ballPicBlue" class="" src="images/9ball.png" alt="" style="width: 80%;"/>
+      </div> 
     </div>
+      <div id="promptTextBlue" class="promptText" style="visibility: hidden">
+        <span>Click the screen for another answer.</span>
+		<form>
+         <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <legend>Was the question answered correctly?</legend>
+              <input type="radio" name="yesno" id="yesno_0" value="yes" />
+              <label for="yesno_0">Yes</label>
+              <input type="radio" name="yesno" id="yesno_1" value="no" />
+              <label for="yesno_1">No</label>
+            </fieldset>
+          </div>
+        </form> 
+      </div>
 <footer class="footer">
   <div class="footer">
     Magic 9 Ball &copy; 2016
   </div>
 </footer>
 </div>
+<!--      ---------------------------   -->
+
 <div id="yellowbg" data-role="page" data-theme="b" data-transition="flip">
 	<div data-role="header" data-theme="b">
       	<a class="hidden" href="index.html" data-role="button" data-icon="back"></a>  
       	<a href="index.html" data-role="button" data-icon="back">Back</a> 
 	  	<div class="logo"><img src="images/magic9ball_logo.png" width="218" height="45" alt=""/></div>
 	</div>
-	<div data-role="content" style="width: 100%;">
-      <h3>Tap the screen or shake the device to receive an answer to your question.</h3>
-    <img class="" src="images/9ball.png" alt="" style="width: 90%;"/> 
-    </div>
+	<div data-role="content" class="image" style="width: 100%; padding: 0px" onClick="newAnswer('Yellow')">
+      <h3>Ask a question out loud, then click the ball to receive an answer.</h3>
+      <div class="ball">	
+        <div id="answerTextYellow" class="answerText"></div>
+        <img id="ballPicYellow" class="" src="images/9ball.png" alt="" style="width: 80%;"/>
+      </div> 
+     </div>
+      <div id="promptTextYellow" class="promptText" style="visibility: hidden">
+        <span>Click the screen for another answer.</span>
+		<form>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <legend>Was the question answered correctly?</legend>
+              <input type="radio" name="yesno" id="yesno_0y" value="yes" />
+              <label for="yesno_0y">Yes</label>
+              <input type="radio" name="yesno" id="yesno_1y" value="no" />
+              <label for="yesno_1y">No</label>
+            </fieldset>
+          </div>
+        </form>
+      </div>
 <footer class="footer">
   <div class="footer">
     Magic 9 Ball &copy; 2016
@@ -77,10 +138,27 @@
       	<a href="index.html" data-role="button" data-icon="back">Back</a> 
 	  	<div class="logo"><img src="images/magic9ball_logo.png" width="218" height="45" alt=""/></div>
 	</div>
-	<div data-role="content" style="width: 100%;">
-      <h3>Tap the screen or shake the device to receive an answer to your question.</h3>
-    <img class="" src="images/9ball.png" alt="" style="width: 90%;"/> 
+	<div data-role="content" class="image" style="width: 100%; padding: 0px" onClick="newAnswer('Black')">
+      <h3>Ask a question out loud, then click the ball to receive an answer.</h3>
+      <div class="ball">	
+        <div id="answerTextBlack" class="answerText" style="color:black"></div>
+        <img id="ballPicBlack" class="" src="images/9ball.png" alt="" style="width: 80%;"/>
+      </div>
     </div>
+      <div id="promptTextBlack" class="promptText" style="visibility: hidden">
+        <span>Click the screen for another answer.</span>
+        <form>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <legend>Was the question answered correctly?</legend>
+              <input type="radio" name="yesno" id="yesno_0b" value="yes" />
+              <label for="yesno_0b">Yes</label>
+              <input type="radio" name="yesno" id="yesno_1b" value="no" />
+              <label for="yesno_1b">No</label>
+            </fieldset>
+          </div>
+        </form>
+      </div> 
 <footer class="footer">
   <div class="footer">
     Magic 9 Ball &copy; 2016

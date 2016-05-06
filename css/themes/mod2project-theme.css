@@ -38,6 +38,80 @@ div.ui-controlgroup-label {
 	font-weight: normal;
 	font-size: 16px;
 }
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+.ball { 
+   text-align: center; 
+   width: 100%; /* for IE 6 */
+}
+h3 {
+	padding-left: 1em;	
+	padding-right: 1em;	
+
+}
+
+
+h2 { 
+   position: absolute; 
+   top: 50%; 
+   left: 38%; 
+   width: 100%; 
+   
+}
+.answerText { 
+   position: absolute; 
+   top: 57%; 
+   width: 100%;
+   text-align: center; 
+   font-size: xx-large;
+   
+}
+.answerText {
+    /*margin-top: 25px;
+    font-size: 21px;
+    text-align: center;*/
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+.promptText {
+	padding: 1em;	
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 /* Separators
 -----------------------------------------------------------------------------------------------------------*/
 /* Field contain separator (< 28em) */
